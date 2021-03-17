@@ -1,4 +1,4 @@
-export default class Members {
+export default class Member {
     constructor(id, name, firstName, title, companyName, nbParts, refCollege) {
         this.id = id;
         this.name = name;

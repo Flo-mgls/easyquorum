@@ -1,4 +1,4 @@
-import Member from '../classes/Members.js'
+import Member from '../classes/Member.js'
 
 const member1 = new Member(501, "Diallo-Robin", "Charles", "Monsieur", null, 15.5, 442);
 const member2 = new Member(502, "Leroux-Bertrand", "Marc", "Monsieur", "Société ABC", 5, 442);
