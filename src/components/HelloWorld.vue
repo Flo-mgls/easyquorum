@@ -38,6 +38,8 @@ export default {
   },
   mounted() {
     console.log(this.$membersList)
+    console.log(this.$collegesList)
+    console.log(this.$resolutionsList)
   }
 }
 </script>
