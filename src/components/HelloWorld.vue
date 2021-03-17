@@ -40,6 +40,7 @@ export default {
     console.log(this.$membersList)
     console.log(this.$collegesList)
     console.log(this.$resolutionsList)
+    console.log(this.$votesList)
   }
 }
 </script>
