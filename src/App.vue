@@ -1,19 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <Resolution/>
+    <header>
+      <img alt="AGA logo" src="./assets/logo.svg" />
+      <h1>Assemblée Générale Annuelle</h1>
+    </header>
+    <main>
+      <Resolution />
+    </main>
   </div>
 </template>
 
 <script>
-import Resolution from './components/Resolution.vue'
+import Resolution from "./components/Resolution.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Resolution
-  }
-}
+    Resolution,
+  },
+};
 </script>
 
 <style lang="scss">
@@ -24,5 +29,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  img {
+    width: 300px;
+    height: auto;
+  }
+  h1 {
+    font-family: "Poiret One", cursive;
+  }
 }
 </style>
