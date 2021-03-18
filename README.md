@@ -1,24 +1,17 @@
-# easyquorum
+# EasyQuorum
+**Frontend de l'exercice de recrutement par EasyQuorum**
 
-## Project setup
+***Pour tester l'app:***
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
 
-### Compiles and minifies for production
+***Pour obtenir la version de distribution:***
 ```
 npm run build
 ```
+***Principales dépendances et technos:***
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+* Vue.js: v2.6.11
+* Bootstrap: v5.0.0
