@@ -1,3 +1,5 @@
+// CLASSE VOTE
+
 export default class Vote {
     constructor(id, resolutionId, memberId, vote) {
         this.id = id;

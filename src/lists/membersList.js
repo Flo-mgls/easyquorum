@@ -1,5 +1,6 @@
 import Member from '../classes/Member.js'
 
+// ON CREE NOS DONNEES A PARTIR DE LA CLASSE QU'ON ENVOI DANS MAIN.JS
 const member1 = new Member(501, "Diallo-Robin", "Charles", "Monsieur", null, 15.5, 442);
 const member2 = new Member(502, "Leroux-Bertrand", "Marc", "Monsieur", "Société ABC", 5, 442);
 const member3 = new Member(503, "Lemonnier", "Johanna", "Madame", null, 10, 442);

@@ -1,5 +1,6 @@
 import Vote from '../classes/Vote.js'
 
+// ON CREE NOS DONNEES A PARTIR DE LA CLASSE QU'ON ENVOI DANS MAIN.JS
 const vote1 = new Vote(101, 92751, 501, true);
 const vote2 = new Vote(102, 92751, 502, false);
 const vote3 = new Vote(103, 92751, 503, false);

@@ -1,3 +1,5 @@
+// CLASSE RESOLUTION
+
 export default class Resolution {
     constructor(id, title, details) {
         this.id = id;

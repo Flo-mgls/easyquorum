@@ -1,3 +1,5 @@
+// CLASSE MEMBER
+
 export default class Member {
     constructor(id, name, firstName, title, companyName, nbrParts, collegeId) {
         this.id = id;

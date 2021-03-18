@@ -1,5 +1,6 @@
 import Resolution from '../classes/Resolution.js'
 
+// ON CREE NOS DONNEES A PARTIR DE LA CLASSE QU'ON ENVOI DANS MAIN.JS
 const Resolution1 = new Resolution(92751, "Résolution n°1", "Approbation du rapport moral");
 const Resolution2 = new Resolution(92752, "Résolution n°2", "Quitus à donner au Syndic pour sa gestion arrêtée au 31/12/2020");
 const Resolution3 = new Resolution(92753, "Résolution n°3", "Approbation des comptes");
