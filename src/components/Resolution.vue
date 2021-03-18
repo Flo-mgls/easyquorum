@@ -4,9 +4,12 @@
       <h2>{{ resolution.title }}</h2>
       <tr v-for="college in colleges" :key="college.id">
         <td>{{ college.name }}</td>
-        <td v-for="vote in giveFor(resolution.id, college.id)" :key="vote.id">
-          {{ vote }}
+        <td v-for="vote in giveFor(resolution, college)" :key="vote.id">
+          {{ vote.nbrVote }} ({{ vote.parts }}) -
         </td>
+      </tr>
+      <tr>
+        <td v-if="resolution.app === true">OKAY</td>
       </tr>
     </div>
   </div>
@@ -24,9 +27,9 @@ export default {
     };
   },
   methods: {
-    giveFor(resolutionId, collegeId) {
+    giveFor(resolution, college) {
       let membersOfThisCollege = this.members.filter(
-        (m) => m.collegeId === collegeId
+        (m) => m.collegeId === college.id
       );
 
       let membersIdOfThisCollege = [];
@@ -35,7 +38,7 @@ export default {
       });
 
       let votesForThisReso = this.votes.filter(
-        (v) => v.resolutionId === resolutionId
+        (v) => v.resolutionId === resolution.id
       );
 
       let votesForThisCollege = [];
@@ -45,16 +48,43 @@ export default {
         }
       });
 
-      let votesResults = { agree: 0, disagree: 0, none: 0 };
+      let totalParts = 0;
+      membersOfThisCollege.forEach(function (m) {
+        totalParts += m.nbrParts;
+      });
+
+      let votesResults = [
+        { nbrVote: 0, parts: 0 },
+        { nbrVote: 0, parts: 0 },
+        { nbrVote: 0, parts: 0 },
+      ];
+
       votesForThisCollege.forEach(function (v) {
+        let member = membersOfThisCollege.find((m) => m.id === v.memberId);
         if (v.vote) {
-          votesResults.agree += 1;
+          votesResults[0].nbrVote += 1;
+          votesResults[0].parts += member.nbrParts;
         } else if (v.vote === null) {
-          votesResults.none += 1;
+          votesResults[2].nbrVote += 1;
+          votesResults[2].parts += member.nbrParts;
         } else {
-          votesResults.disagree += 1;
+          votesResults[1].nbrVote += 1;
+          votesResults[1].parts += member.nbrParts;
         }
       });
+
+      votesResults.forEach(function (v) {
+        v.parts = Math.round((v.parts / totalParts) * 100 * 100) / 100;
+      });
+
+      if (votesResults[0].parts >= 50 && resolution.app != false) {
+        resolution.app = true;
+      } else {
+        resolution.app = false;
+      }
+
+
+
       return votesResults;
     },
   },

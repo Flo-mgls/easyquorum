@@ -6,7 +6,7 @@ const vote3 = new Vote(103, 92751, 503, false);
 const vote4 = new Vote(104, 92751, 504, null);
 const vote5 = new Vote(105, 92751, 505, true);
 const vote6 = new Vote(106, 92751, 506, true);
-const vote7 = new Vote(107, 92751, 507, false);
+const vote7 = new Vote(107, 92751, 507, true);
 
 const vote8 = new Vote(108, 92752, 501, false);
 const vote9 = new Vote(109, 92752, 502, false);
@@ -29,8 +29,8 @@ const vote23 = new Vote(123, 92754, 502, true);
 const vote24 = new Vote(124, 92754, 503, true);
 const vote25 = new Vote(125, 92754, 504, false);
 const vote26 = new Vote(126, 92754, 505, true);
-const vote27 = new Vote(127, 92754, 506, true);
-const vote28 = new Vote(128, 92754, 507, false);
+const vote27 = new Vote(127, 92754, 506, null);
+const vote28 = new Vote(128, 92754, 507, true);
 
 const vote29 = new Vote(129, 92755, 501, true);
 const vote30 = new Vote(130, 92755, 502, true);
